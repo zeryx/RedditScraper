@@ -18,7 +18,6 @@ object redditScraper {
     val dir = new File(s"${args(2)}/reddit/${args(0)}/")
     dir.mkdirs()
 
-
     //open a new csv file
     val csvFile = new File(s"${dir.getAbsolutePath}/${args(0)}.csv")
     //makes a new request
@@ -65,7 +64,7 @@ object redditScraper {
           bw.close()
         }
       } catch {
-        case e: IOException => Thread.sleep(1000)
+        case e: IOException => println(e.getMessage);Thread.sleep(1000)
       }
     }
   }
