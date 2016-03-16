@@ -15,7 +15,7 @@ object redditScraper {
 
   def main(args: Array[String]): Unit = {
 
-    val dir = new File(s"${args(3)}/reddit/${args(0)}/")
+    val dir = new File(s"${args(2)}/reddit/${args(0)}/")
     dir.mkdirs()
 
 
